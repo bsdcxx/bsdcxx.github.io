@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.50 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="程肖雪 project">
+<meta name="keywords" content="">
+<meta name="description" content="Arduino &emsp;&emsp;Arduino是一个开放源码电子原型平台，拥有灵活、易用的硬件和软件。Arduino可以接收来自各种传感器的输入信号从而检测出运行环境，并通过控制光源，电机以及其他驱动器来影响 其周围环境。板上的微控制器编程使用Arduino编程语言（基于Wiring）和Arduino开发环境（以Processing为基 础）。Arduino可以独立运行，也可以与计算机上运行的软件（例如，Flash，Processing，MaxMSP）进行通 信。Arduino开发 IDE 接口基于开放源代码，可以让您免费下载使用开发出更多令人惊艳的互动作品。">
+
+
+<meta property="og:description" content="Arduino &emsp;&emsp;Arduino是一个开放源码电子原型平台，拥有灵活、易用的硬件和软件。Arduino可以接收来自各种传感器的输入信号从而检测出运行环境，并通过控制光源，电机以及其他驱动器来影响 其周围环境。板上的微控制器编程使用Arduino编程语言（基于Wiring）和Arduino开发环境（以Processing为基 础）。Arduino可以独立运行，也可以与计算机上运行的软件（例如，Flash，Processing，MaxMSP）进行通 信。Arduino开发 IDE 接口基于开放源代码，可以让您免费下载使用开发出更多令人惊艳的互动作品。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arduino学习">
+<meta name="twitter:title" content="Arduino学习">
+<meta property="og:url" content="https://bsdcxx.github.io/2018/11/arduino%E5%AD%A6%E4%B9%A0/">
+<meta property="twitter:url" content="https://bsdcxx.github.io/2018/11/arduino%E5%AD%A6%E4%B9%A0/">
+<meta property="og:site_name" content="关于程肖雪的项目">
+<meta property="og:description" content="Arduino &emsp;&emsp;Arduino是一个开放源码电子原型平台，拥有灵活、易用的硬件和软件。Arduino可以接收来自各种传感器的输入信号从而检测出运行环境，并通过控制光源，电机以及其他驱动器来影响 其周围环境。板上的微控制器编程使用Arduino编程语言（基于Wiring）和Arduino开发环境（以Processing为基 础）。Arduino可以独立运行，也可以与计算机上运行的软件（例如，Flash，Processing，MaxMSP）进行通 信。Arduino开发 IDE 接口基于开放源代码，可以让您免费下载使用开发出更多令人惊艳的互动作品。">
+<meta name="twitter:description" content="Arduino &emsp;&emsp;Arduino是一个开放源码电子原型平台，拥有灵活、易用的硬件和软件。Arduino可以接收来自各种传感器的输入信号从而检测出运行环境，并通过控制光源，电机以及其他驱动器来影响 其周围环境。板上的微控制器编程使用Arduino编程语言（基于Wiring）和Arduino开发环境（以Processing为基 础）。Arduino可以独立运行，也可以与计算机上运行的软件（例如，Flash，Processing，MaxMSP）进行通 信。Arduino开发 IDE 接口基于开放源代码，可以让您免费下载使用开发出更多令人惊艳的互动作品。">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2018-11-11T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2018-11-11T00:00:00">
+  
+  
+  
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=640">
+
+
+    <title>Arduino学习</title>
+
+    <link rel="icon" href="https://bsdcxx.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://bsdcxx.github.io/2018/11/arduino%E5%AD%A6%E4%B9%A0/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://bsdcxx.github.io/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://bsdcxx.github.io/">关于程肖雪的项目</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://bsdcxx.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://bsdcxx.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">程肖雪 project</h4>
+        
+          <h5 class="sidebar-profile-bio">成为更酷的人</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://bsdcxx.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://bsdcxx.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://bsdcxx.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://bsdcxx.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://bsdcxx.github.io/">
+    
+      
+      
+      <span class="sidebar-button-desc">tutorials</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/bsdcxx/" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/636472/kakawait" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+      
+      <span class="sidebar-button-desc">文章流</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://bsdcxx.github.io/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      Arduino学习
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-11-11T00:00:00Z">
+        
+  November 11, 2018
+
+      </time>
+    
+    
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              
+
+<h1 id="arduino">Arduino</h1>
+
+<p>&emsp;&emsp;Arduino是一个开放源码电子原型平台，拥有灵活、易用的硬件和软件。Arduino可以接收来自各种传感器的输入信号从而检测出运行环境，并通过控制光源，电机以及其他驱动器来影响
+其周围环境。板上的微控制器编程使用Arduino编程语言（基于Wiring）和Arduino开发环境（以Processing为基
+础）。Arduino可以独立运行，也可以与计算机上运行的软件（例如，Flash，Processing，MaxMSP）进行通
+信。Arduino开发 IDE 接口基于开放源代码，可以让您免费下载使用开发出更多令人惊艳的互动作品。</p>
+
+<h2 id="arduino-uno">Arduino UNO</h2>
+
+<p>&emsp;&emsp;数字扣和模拟扣，即I/O。数字口有0~13，模拟口有0~5。
+<img src="https://bsdcxx.github.io/images/1543130841.png" alt="UNO" /><br />
+&emsp;&emsp;UNO可以通过两种方式供电方式，一种通过USB供电，另一种是通过外接
+6~12V的DC电源。ON是电源指示灯，通电就会亮了。L是接在数字口13上的一个LED，在下面一节会有个样例来说明的。TX、RX是串口通讯指示灯，比如我们在下载程序的过程中，这两个灯就会不停闪烁。</p>
+
+<h3 id="安装">安装</h3>
+
+<p>&emsp;&emsp;1.<a href="http://arduino.cc/en/Main/Software">下载</a>Arduino ZIP解压文件夹。<br />
+&emsp;&emsp;2.安装驱动：Arduino UNO和电脑相连，打开ON指示灯。打开控制面板，选择设备管理器。找到其他设备&gt;Arduino-XX，右击选择更新驱动程序软件。<br />
+&emsp;&emsp;3.在弹出的对话框中选择下面一项&ndash;&gt; 手动查找并安装驱动程序软件。<br />
+&emsp;&emsp;4.打开到Arduino IDE安装位置，就是上面那个解压文件的位置，选择搜索路径到drivers，点击下一步。<br />
+&emsp;&emsp;5.选择始终安装此驱动程序软件，直至完成。<br />
+&emsp;&emsp;<img src="https://bsdcxx.github.io/images/1543134497.png" alt="完成" /></p>
+
+<h3 id="下载一个blink程序">下载一个Blink程序</h3>
+
+<p>&emsp;&emsp;下载一个最简单的代码，既可以帮你熟悉如何下载程序，同时也测试下板子好坏。UNO板上标有L的LED。这段测试代码就是让这个LED灯闪烁。插上USB线，打开Arduino IDE后，找到“Blink”代码。<br />
+<img src="https://bsdcxx.github.io/images/1543135676.png" alt="Blink程序下载" /><br />
+&emsp;&emsp;点击“校验”。在以后写代码的过程中，输入完代码，都需要校验一下，然后再下载到Arduino中。<br />
+&emsp;&emsp;在下载程序之前，我们还要先告诉Arduino IDE板子型号以及相应的串口。选择所用的板卡Board → Arduino UNO。 选择当前的串口——COM口。最后，点击“下载”。
+<img src="https://bsdcxx.github.io/images/1543136242.png" alt="UNO" /></p>
+
+<p><strong>以后程序下载就照着这个步骤做就可以了，再理一下思路，分为三步走:
+校验 → 选择boards和com → 下载！</strong></p>
+
+<h3 id="如何加载库">如何加载库</h3>
+
+<p>1.先把库文件从网站上下载下来，整个压缩包解压到 Arduino IDE 的libraries文件夹中。需要注意的是，库文件夹下要直接显示<em>.cpp和</em>.h文件，绝对不可以把这些库文件再套到二级以上目录，这样子就会导致IDE无法识别。<br />
+2.接下来直接用 Arduino IDE 运行Example里面的程序就可以了，注意不同代码对应的引脚不同。在代码中改为你连接的引脚就行了。
+<img src="https://bsdcxx.github.io/images/1543584804.png" alt="库安装" /></p>
+
+<h3 id="代码案例">代码案例</h3>
+
+<h4 id="1-led闪烁">1.LED闪烁</h4>
+
+<p>这里我们需要外接一个LED到数字引脚，而不是使用焊在开发板上的LED 13（也就是“L”灯）。</p>
+
+<p>LED长脚为+，短脚为-（<strong>绿色为数字口，蓝色为模拟口，红色为电源VCC，黑色为GND，白色可随意搭配</strong>）</p>
+
+<p>代码分析：</p>
+
+<ul>
+<li>ledPin这个变量表示LED和Arduino的数字引脚10相连；</li>
+<li>setup()函数，它的目的主要的loop函数运行之前为程序做必要的设置。用于初始化变量、设置针脚的输出/输入类型、配置串口等等。每次 Arduino 上电或重启后，setup 函数只运行一次；</li>
+<li>pinMode(pin, mode)函数，pin是引脚号，mode代表模式（INPUT/OUTPUT）；pinMode()中的INPUT与OUTPUT设置是有讲究的，是由器件本身的功能决定的。LED、蜂鸣器用pinMode(pin, OUTPUT)和digitalWrite(pin,HIGH/LOW）；按键控制用pinMode(pin, INPUT)和digitalRead(pin）</li>
+<li>digitalWrite(pin,value）value值为HIGH（5V/3.3V）和LOW（0V），分别为点亮和熄灭。</li>
+<li>delay(1000)即延迟，等待时间。1000为1秒</li>
+</ul>
+
+<h4 id="2-s-o-s求救信号器">2.S.O.S求救信号器</h4>
+
+<p>莫尔斯码是一种字符编码，英文的每个字母，都是由横杠和点不同的组合而成。这样的好处是，使用简单的两种状态，就能来传递所有的字母和数字。字母“S”用三个点表示，我们这里用短闪烁替代，字母“O”则用三个横杠表示，用长闪烁替代。</p>
+
+<ul>
+<li>for(循环初始化；循环条件；循环调整语句){<br />
+循环体语句；<br />
+}</li>
+<li>==（等于）<br />
+!=（不等于）<br />
+&lt;（小于）<br />
+&gt;（大于）<br />
+&lt;=（小于等于）<br />
+&gt;=（大于等于）<br /></li>
+</ul>
+
+<h4 id="3-互动交通信号灯">3.互动交通信号灯</h4>
+
+<p><img src="https://bsdcxx.github.io/images/1543581852.png" alt="交通信号灯硬件接法" /><br />
+下拉电阻：当输入电路状态为HIGH的时候，电压要尽可能接近5V。输入电路状态为LOW的时候，电压要尽可能接近0V。如果不能确保状态接近所需电压，这部分电路就会产生电压浮动。所以，我们在按钮那里接了一个电阻来确保一定达到LOW，这个电阻就是所谓下拉电阻。避免产生电压浮动现象。</p>
+
+<ul>
+<li>pinMode(button, INPUT);后面要用digitalRead(button);<br /></li>
+<li><img src="https://bsdcxx.github.io/images/1543582780.png" alt="变量类型" /><br /></li>
+<li>millis ( ) 是一个函数， 该函数是Arduino语言自有的函数，它返回
+值是一个时间，Arduino开始运行到执行到当前的时间，也称之为机器时间，就像一个隐形时钟，从控制器开始运行的那一刻起开始计时， 以毫秒为单位。变量changeTime初始化时，不存储任何数值， 只有在Arduino运行之后，将millis()值赋给它，它才开始有数值，并且随着millis()值变化而变化。</li>
+<li>逻辑运算符：<br />
+&amp;&amp; —— 逻辑与（两者同时满足）<br />
+|| —— 逻辑或（两者其中一个满足）<br />
+！—— 逻辑非（取反，相反的情况）<br /></li>
+</ul>
+
+<h4 id="4-呼吸灯">4.呼吸灯</h4>
+
+<ul>
+<li>void fadeOn(unsigned int time,int increament){<br />
+&emsp;for (byte value = 0 ; value &lt;255; value+=increament){<br />
+&emsp;&emsp;analogWrite(ledPin, value);<br />
+&emsp;&emsp;delay(time/(<sup>255</sup>&frasl;<sub>5</sub>));<br />
+&emsp;&emsp;}<br />
+}<br />
+fadeOn()、fadeOff()</li>
+<li>analogWrite(ledPin, value)。该函数作用是发送一个模拟值到一个数字引脚。使用这个函数是要具备特定条件的——该数字引脚需具有PWM功能。观察一下Arduino板，查看数字引脚，你会发现其中6个引脚（3、5、6、9、10、11）旁标有“~”，这些引脚不同于其他引脚，因为它们可以输出PWM信号。value是0~255的数字。</li>
+<li>PWM是一项通过数字方法来获得模拟量的技术。数字控制来形成一个方波，方波信号只有开关两种状态（也就是我们数字引脚的高低）。通过控制开与关所持续时间的比值就能模拟到一个0到5V之间变化的电压。开（学术上称为高电平）所占用的时间就叫做脉冲宽度，所以PWM也叫做脉冲宽度调制。
+<img src="https://bsdcxx.github.io/images/1543583955.png" alt="变量类型" /><br />
+duty cycle叫占空比，每个analogWrite(value)中写入的value都能对应一个占空比，它指的是一个周期内高电平持续时间比上低电平持续时间得到的百分比。。图中，从上往下，第一个方波，占空比为0%，对应的value为0。LED亮度最低，也就是灭的状态。高电平持续时间越长，也就越亮。所以，最后一个占空比为100%的对应value是255，LED最亮。50%就是最亮的一半了，25%则相对更暗。<br /></li>
+</ul>
+
+<h4 id="5-炫彩rgb-led">5.炫彩RGB LED</h4>
+
+<p>RGB分为共阳和共阴两种，区别有两点：<br />
+（1）接线中的改变，共阳的话，共用端需要接5V，而不是GND，否则LED不能被点亮；<br />
+（2）第二点就是，在颜色的调配上，与共阴是完全相反的。
+举个例子：共阴RGB显示红色为R-255，G-0，B-0。然而共阳则完全相反，RGB数值是R-0, G-255, B-255。</p>
+
+<ul>
+<li>//R:0-255 G:0-255 B:0-255</li>
+<li>colorRGB(random(0,255),random(0,255),random(0,255));colorRGB()，函数有三个传递参数，用于写入Red、Green、Blue的值，也就是0~255的值。</li>
+<li>constrain(x,a,b)这里x是一个被约束的数，a是最小值，b是最大值。如果值小于a，则返回a。如果大于b，则返回b。<br /></li>
+</ul>
+
+<h4 id="6-报警器">6.报警器</h4>
+
+<p>意蜂鸣器长脚为正（+），短脚为（-）。其原理是利用正弦波产生不同频率的声音。<br />
+1.压电式和电磁式：压电式蜂鸣器需要比较高的电压才能有足够的音压,一般建议为9V以上。电磁式蜂鸣器用1.5V就可以发出85dB以上的音压了，唯消耗电流会大大的高于压电式蜂鸣器；<br />
+2.有源和无源：“源”不是指电源，而是指振荡源，有源蜂鸣器（有长短脚）内部带振荡源，说白了就是只要一通电就会响。而无源（无长短脚）内部不带震荡源，所以如果仅用直流信号无法使其响，必须用2K-5K的方波去驱动它。<br />
+* sinVal=(sin(x*(3.<sup>1412</sup>&frasl;<sub>180</sub>)));将角度转化为弧度
+* toneVal =2000+(int(sinVal*1000));现在toneVal就是一个适合声音频率了。<br />
+* tone()函数：<br />
+&emsp;1.tone(pin,frequency):frequency是以Hz为单位的频率值，本案例中为toneVal<br />
+&emsp;2.tone(pin,frequency,duration):duration参数是以毫秒为单位，表示声音长度的参数。如果没有指定duration，声音将一直持续直到输出一个不同频率的声音产生。<br />
+&emsp;3.noTone(pin):结束该指定引脚上产生的声音</p>
+
+<h4 id="7-温度报警器">7.温度报警器</h4>
+
+<ul>
+<li>LM35温度传感器：把温度信号变为电压的改变。Arduino的模拟引脚连接到一个了10位A/D转换， 输入0 ~ 5V的电压对应读到0~1023的数值，每个读到的温度数值对应的都是一个电压值。每10mV对应1摄氏度。<br />
+<img src="https://bsdcxx.github.io/images/1543621154.png" alt="原理" /><br />
+对于这个传感器：Vout = 10mV/℃ * T℃<br />
+<a href="http://www.alldatasheet.com/">Datasheet</a>会提供出场芯片的性能参数及一些简单的电路搭建。<br /></li>
+<li>成功下载完程序后，打开Arduino IDE的串口监视器。设置串口监视器的波特率为9600。就可以直接从串口中读取温度值，并尝试升高周围环境温度，或者用手直接接触LM35使其升温，串口可以很直观的看到温度有明显的变化。<br /></li>
+<li>串口：Arduino与外界进行通信的一个简单办法。UNO分别和数字引脚0（RX）和数字引脚1（TX）相连。所以两个引脚不能做输入输出功能，也不能在下载程序时接东西。<br /></li>
+<li>Val=analogRead(Pin)从某模拟口读值</li>
+<li>data = (double) val *(<sup>5</sup>&frasl;<sub>10</sub>.24);从传感器中读到的电压值，它的范围在0~1023，将该值分成1024份， 再把结果乘以5 ， 映射到0~5V，因为每度10mV，需要再乘以100得到一个double型温度值，最后赋给data变量。</li>
+
+<li><p>serial.begin(9600):初始化串口的波特率，也就是数据传输的速度
+serial.print(val):<br />
+（1）数字则是以位形式输出;<br />
+（2）浮点型数据输出时只保留小数点后两位;<br />
+（3）字符和字符串则原样输出，字符需要加单引号，字符串需要加双引号。<br />
+serial.printIn(val):println()比print()多了回车换行，其他完全相同。</p>
+
+<h4 id="8-震动传感器">8.震动传感器</h4></li>
+
+<li><p>滚珠开关：需要一个下拉电阻。通过珠子滚动接触导针的原理来控制电路的通断。金色导针一端是导通的，银色导针一端是不导通的。<br />
+<img src="https://bsdcxx.github.io/images/1543624281.png" alt="滚珠原理" /></p></li>
+
+<li><p>中断函数attachInterrupt(interrupt,function,mode)是一个当外部发生中断时，才被唤醒的函数。区别于其他函数，它依附于中断引脚才发生。大多数板子都有两个外部中断引脚： 数字引脚2（ 中断0 ） 和数字引脚3 （ 中断1）中断0与中断1是中断号，在函数中需要用到。不同板子，中断号对应引脚可能不同，可以查阅<a href="http://arduino.cc/en/Reference/AttachInterrupt">Arduino官方编程语法手册</a><br />
+interrupt：中断号0或者1。如果选 低电平时，触发中断。择0的话，连接到数字引脚2上，选择1的话，连接到数字引脚3上；<br />
+function：调用的中断函数名。写中断函数时，需要特别说明：<br />
+1、我们在写中断函数的时候，该函数不能含有参数和返回值。也就是说，要是一个无返回值的函数；<br />
+2、中断函数中不要使用delay()和millis()函数，因为数值不会继续变
+化；<br />
+3、中断函数中不要读取串口，串口收到的数据可能会丢失。<br />
+mode：中断的条件。只有特定的以下四种情况：<br />
+1、LOW 当引脚为低电平时，触发中断；<br />
+2、CHANGE 当引脚电平发生改变时，触发中断；<br />
+3、RISING 当引脚由低电平变为高电平时，触发中断；<br />
+4、FALLING 当引脚由高电平变为低电平时，出发断电。</p></li>
+</ul>
+
+<h4 id="9-感应灯">9.感应灯</h4>
+
+<ul>
+<li>光敏电阻：光线越强，电阻值越低（根据分压原理，电压越小，小于一定值LED灭掉）。光敏二极管是光敏电阻的一种，还具有正负极性。<br /></li>
+<li>与光敏二极管相连的电阻是10k，而不是220Ω，电阻值太小会让两个电阻比值变化不明显。<br /></li>
+</ul>
+
+<h4 id="10-舵机初动">10.舵机初动</h4>
+
+<ul>
+<li>舵机是一种电机，用一个反馈系统控制其位置，较多用于对角度有要求的场合，如摄像头、机器人关节；<br /></li>
+<li>#include <Servo.h>——声明调用Servo.h库，<Servo.h>库已存在libraries/Servo/Servo.h。库就是将多个函数封装打包。函数名是函数的标签，库名是也叫“对象”。Servo myservo就是创建一个叫myservo的舵机对象，myservo.attach(pin)就是调用Servo库中的attach函数，即将引脚上的舵机与声明的舵机对象连接起来，pin不建议使用数字0，1。<br /></li>
+<li>电位器是一个可变电阻，连通模拟引脚，依靠电压（0~1023）转换成角度（0~179），所以要用map函数，map(value，fromLow, fromHigh,
+toLow, toHigh)，将一个数从一个范围映射到另外一个范围。<br /></li>
+</ul>
+
+<h4 id="11-自制风扇">11.自制风扇</h4>
+
+<ul>
+<li>继电器有6个引脚，。1，2引脚为继电器的输入信号，分别接Arduino的数字引脚和GND。3,4,5,6为继电器输出的控制引脚，一般用到3，5或4，6或3，6或4，5；Arduino给HIGH后，常开端（NO）就与公共端导通。如果Arduino给LOW，线圈中没有电流，常闭端（NC）就与公共端导通。<br />
+<img src="https://bsdcxx.github.io/images/1543753010.png" alt="继电器结构" /></li>
+</ul>
+
+<h4 id="12-红外遥控灯">12.红外遥控灯</h4>
+
+<ul>
+<li>红外接收管，也就是接收红外光的电子器件。调用<IRremote.h>库（现成的，直接加载库，运行Example中的IRrecvDemo代码即可）。<br /></li>
+<li>代码含义：<br />
+<img src="https://bsdcxx.github.io/images/1543754000.png" alt="IRremote库代码" /><br />
+如果按住常按一个键不放就是出现“FFFFFFFF”。在串口中，正确接收的话，应该收到以FD-开头的六位数。如果遥控器没有对准红外接收管的话，可能会接收到错误的代码。</li>
+</ul>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://bsdcxx.github.io/2018/11/atom%E5%92%8Cmarkdown%E5%AD%A6%E4%B9%A0/" data-tooltip="Atom和Markdown学习">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="#ZgotmplZ">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="#ZgotmplZ">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="#ZgotmplZ">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2018 程肖雪 project. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://bsdcxx.github.io/2018/11/atom%E5%92%8Cmarkdown%E5%AD%A6%E4%B9%A0/" data-tooltip="Atom和Markdown学习">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="#ZgotmplZ">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="#ZgotmplZ">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="#ZgotmplZ">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="%25!%28EXTRA%20string=https%3A%2F%2Fbsdcxx.github.io%2F2018%2F11%2Farduino%25E5%25AD%25A6%25E4%25B9%25A0%2F%29">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="%25!%28EXTRA%20string=https%3A%2F%2Fbsdcxx.github.io%2F2018%2F11%2Farduino%25E5%25AD%25A6%25E4%25B9%25A0%2F%29">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="%25!%28EXTRA%20string=https%3A%2F%2Fbsdcxx.github.io%2F2018%2F11%2Farduino%25E5%25AD%25A6%25E4%25B9%25A0%2F%29">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">程肖雪 project</h4>
+    
+      <div id="about-card-bio">成为更酷的人</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        科学教师 A science teacher
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        中国 北京
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://bsdcxx.github.io/2018/11/arduino%E5%AD%A6%E4%B9%A0/">
+                <h3 class="media-heading">Arduino学习</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Arduino &emsp;&emsp;Arduino是一个开放源码电子原型平台，拥有灵活、易用的硬件和软件。Arduino可以接收来自各种传感器的输入信号从而检测出运行环境，并通过控制光源，电机以及其他驱动器来影响 其周围环境。板上的微控制器编程使用Arduino编程语言（基于Wiring）和Arduino开发环境（以Processing为基 础）。Arduino可以独立运行，也可以与计算机上运行的软件（例如，Flash，Processing，MaxMSP）进行通 信。Arduino开发 IDE 接口基于开放源代码，可以让您免费下载使用开发出更多令人惊艳的互动作品。</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://bsdcxx.github.io/2018/11/atom%E5%92%8Cmarkdown%E5%AD%A6%E4%B9%A0/">
+                <h3 class="media-heading">Atom和Markdown学习</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Atom和markdown编辑器 ATOM下载 atom软件，打开根目录下的config.toml，对网站首页进行编辑。
+网站中pose上的内容如果行数太多，可以在config.toml中加一行代码：summaryLength = 5（详情见https://www.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://bsdcxx.github.io/2018/11/3d-design%E8%BD%AF%E4%BB%B6/">
+                <h3 class="media-heading">3D design软件</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">#3D设计软件
+##Rhino犀牛：建模软件
+下载（试用版）
+视频学习
+插件：</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://bsdcxx.github.io/2018/10/git%E5%92%8Cgithub%E5%AD%A6%E4%B9%A0/">
+                <h3 class="media-heading">git和gitHub学习</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">git和gitHub git是什么？ &emsp;&emsp;Git是目前世界上最先进的分布式版本控制系统。可以随时看到文件的改动并进行恢复，减少了修改文件后产生的多个文档。
+gitHub是什么？ &emsp;&emsp;是一个面向开源及私有软件项目的托管平台，因为只支持git 作为唯一的版本库格式进行托管，故名gitHub。作为一个分布式的版本控制系统，在Git中并不存在主库这样的概念，每一份复制出的库都可以独立使用，任何两个库之间的不一致之处都可以进行合并。而GitHub可以托管各种git库，并提供一个web界面。在GitHub，用户可以十分轻易地找到海量的开源代码。</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://bsdcxx.github.io/2018/10/%E7%94%A8hugo%E5%92%8Cgithub%E5%88%B6%E4%BD%9C%E7%BD%91%E7%AB%99/">
+                <h3 class="media-heading">用hugo和github制作网站</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">安装git 1.安装git .如果你不确定自己的电脑是否安装了Git或者安装之后不知道安装是否完成，都可以使用git的版本查询完成确认：git &ndash;version</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://bsdcxx.github.io/2018/10/%E5%88%9D%E8%AF%86fablab/">
+                <h3 class="media-heading">初识Fablab</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Fablab是什么？ 简介 &emsp;&emsp;Fab Lab即微观装配实验室（Fabrication Laboratory），是美国MIT比特与原子研究中心发起的一项新颖的实验——一个拥有几乎可以制造任何产品和工具的小型的工厂。该中心主任Gershenfeld教授认为，迄今为止，数字革命的发展已经经历了两个重要的阶段，分别是个人通讯和个人计算。以移动技术为代表的普适计算的发展通过上述两个阶段的发展，无所不在的个人通讯网络及个人计算已经形成。目前，人类正处于第三次数字革命的前夕，在这次以“个人制造”为核心的革命中，相关的材料技术和信息技术已经露出苗头。从某种意义上说，Fab Lab正是这即将到来的革命大潮前跃起的浪花。</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://bsdcxx.github.io/2018/10/%E5%90%84%E7%A7%8Dfab%E9%A1%B9%E7%9B%AE/">
+                <h3 class="media-heading">各种Fab项目</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Fablab for high school students:(in Cambridge) 初高中生一块上Fab Academy 全球各地教育届的人士都在上fablab</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://bsdcxx.github.io/1/01/hugo%E5%AD%A6%E4%B9%A0/">
+                <h3 class="media-heading">HUGO学习</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 0001
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Hugo学习 1.在c盘用户中新建一个名为hugo的文件夹
+2.下载hugo：找到相应版本，解压到c盘用户下新建的hugo文件夹中
+hugo下载网址</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://bsdcxx.github.io/2014/08/video-integrations-showcase/">
+                <h3 class="media-heading">Video integrations showcase</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Aug 8, 2014
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Youtube and Vimeo videos are easily integrated thanks to tags plugins. Of course, you can add video other platforms like dailymotion.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://bsdcxx.github.io/2013/02/image-gallery-showcase/">
+                <h3 class="media-heading">Image gallery showcase</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2013
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>And here is the image gallery!
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         10 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://bsdcxx.github.io/images/cover.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://bsdcxx.github.io/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/bsdcxx.github.io\/2018\/11\/arduino%E5%AD%A6%E4%B9%A0\/';
+          
+            this.page.identifier = '\/2018\/11\/arduino%E5%AD%A6%E4%B9%A0\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 关于程肖雪的项目</title>
+    <link>https://bsdcxx.github.io/post/</link>
+    <description>Recent content in Posts on 关于程肖雪的项目</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bsdcxx.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Arduino学习</title>
+      <link>https://bsdcxx.github.io/2018/11/arduino%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Sun, 11 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bsdcxx.github.io/2018/11/arduino%E5%AD%A6%E4%B9%A0/</guid>
+      <description>Arduino &amp;emsp;&amp;emsp;Arduino是一个开放源码电子原型平台，拥有灵活、易用的硬件和软件。Arduino可以接收来自各种传感器的输入信号从而检测出运行环境，并通过控制光源，电机以及其他驱动器来影响 其周围环境。板上的微控制器编程使用Arduino编程语言（基于Wiring）和Arduino开发环境（以Processing为基 础）。Arduino可以独立运行，也可以与计算机上运行的软件（例如，Flash，Processing，MaxMSP）进行通 信。Arduino开发 IDE 接口基于开放源代码，可以让您免费下载使用开发出更多令人惊艳的互动作品。</description>
+    </item>
+    
+    <item>
+      <title>Atom和Markdown学习</title>
+      <link>https://bsdcxx.github.io/2018/11/atom%E5%92%8Cmarkdown%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Thu, 08 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bsdcxx.github.io/2018/11/atom%E5%92%8Cmarkdown%E5%AD%A6%E4%B9%A0/</guid>
+      <description>Atom和markdown编辑器 ATOM下载 atom软件，打开根目录下的config.toml，对网站首页进行编辑。
+网站中pose上的内容如果行数太多，可以在config.toml中加一行代码：summaryLength = 5（详情见https://www.</description>
+    </item>
+    
+    <item>
+      <title>3D design软件</title>
+      <link>https://bsdcxx.github.io/2018/11/3d-design%E8%BD%AF%E4%BB%B6/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bsdcxx.github.io/2018/11/3d-design%E8%BD%AF%E4%BB%B6/</guid>
+      <description>#3D设计软件
+##Rhino犀牛：建模软件
+下载（试用版）
+视频学习
+插件：</description>
+    </item>
+    
+    <item>
+      <title>git和gitHub学习</title>
+      <link>https://bsdcxx.github.io/2018/10/git%E5%92%8Cgithub%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Tue, 30 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bsdcxx.github.io/2018/10/git%E5%92%8Cgithub%E5%AD%A6%E4%B9%A0/</guid>
+      <description>git和gitHub git是什么？ &amp;emsp;&amp;emsp;Git是目前世界上最先进的分布式版本控制系统。可以随时看到文件的改动并进行恢复，减少了修改文件后产生的多个文档。
+gitHub是什么？ &amp;emsp;&amp;emsp;是一个面向开源及私有软件项目的托管平台，因为只支持git 作为唯一的版本库格式进行托管，故名gitHub。作为一个分布式的版本控制系统，在Git中并不存在主库这样的概念，每一份复制出的库都可以独立使用，任何两个库之间的不一致之处都可以进行合并。而GitHub可以托管各种git库，并提供一个web界面。在GitHub，用户可以十分轻易地找到海量的开源代码。</description>
+    </item>
+    
+    <item>
+      <title>用hugo和github制作网站</title>
+      <link>https://bsdcxx.github.io/2018/10/%E7%94%A8hugo%E5%92%8Cgithub%E5%88%B6%E4%BD%9C%E7%BD%91%E7%AB%99/</link>
+      <pubDate>Tue, 30 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bsdcxx.github.io/2018/10/%E7%94%A8hugo%E5%92%8Cgithub%E5%88%B6%E4%BD%9C%E7%BD%91%E7%AB%99/</guid>
+      <description>安装git 1.安装git .如果你不确定自己的电脑是否安装了Git或者安装之后不知道安装是否完成，都可以使用git的版本查询完成确认：git &amp;ndash;version</description>
+    </item>
+    
+    <item>
+      <title>初识Fablab</title>
+      <link>https://bsdcxx.github.io/2018/10/%E5%88%9D%E8%AF%86fablab/</link>
+      <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bsdcxx.github.io/2018/10/%E5%88%9D%E8%AF%86fablab/</guid>
+      <description>Fablab是什么？ 简介 &amp;emsp;&amp;emsp;Fab Lab即微观装配实验室（Fabrication Laboratory），是美国MIT比特与原子研究中心发起的一项新颖的实验——一个拥有几乎可以制造任何产品和工具的小型的工厂。该中心主任Gershenfeld教授认为，迄今为止，数字革命的发展已经经历了两个重要的阶段，分别是个人通讯和个人计算。以移动技术为代表的普适计算的发展通过上述两个阶段的发展，无所不在的个人通讯网络及个人计算已经形成。目前，人类正处于第三次数字革命的前夕，在这次以“个人制造”为核心的革命中，相关的材料技术和信息技术已经露出苗头。从某种意义上说，Fab Lab正是这即将到来的革命大潮前跃起的浪花。</description>
+    </item>
+    
+    <item>
+      <title>各种Fab项目</title>
+      <link>https://bsdcxx.github.io/2018/10/%E5%90%84%E7%A7%8Dfab%E9%A1%B9%E7%9B%AE/</link>
+      <pubDate>Sat, 20 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bsdcxx.github.io/2018/10/%E5%90%84%E7%A7%8Dfab%E9%A1%B9%E7%9B%AE/</guid>
+      <description>Fablab for high school students:(in Cambridge) 初高中生一块上Fab Academy 全球各地教育届的人士都在上fablab</description>
+    </item>
+    
+    <item>
+      <title>HUGO学习</title>
+      <link>https://bsdcxx.github.io/1/01/hugo%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bsdcxx.github.io/1/01/hugo%E5%AD%A6%E4%B9%A0/</guid>
+      <description>Hugo学习 1.在c盘用户中新建一个名为hugo的文件夹
+2.下载hugo：找到相应版本，解压到c盘用户下新建的hugo文件夹中
+hugo下载网址</description>
+    </item>
+    
+    <item>
+      <title>Video integrations showcase</title>
+      <link>https://bsdcxx.github.io/2014/08/video-integrations-showcase/</link>
+      <pubDate>Sat, 09 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://bsdcxx.github.io/2014/08/video-integrations-showcase/</guid>
+      <description>&lt;p&gt;Youtube and Vimeo videos are easily integrated thanks to tags plugins. Of course, you can add video other platforms like dailymotion.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Image gallery showcase</title>
+      <link>https://bsdcxx.github.io/2013/02/image-gallery-showcase/</link>
+      <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://bsdcxx.github.io/2013/02/image-gallery-showcase/</guid>
+      <description>&lt;p&gt;And here is the image gallery!
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.50 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="程肖雪 project">
+<meta name="keywords" content="">
+<meta name="description" content="Hugo学习 1.在c盘用户中新建一个名为hugo的文件夹
+2.下载hugo：找到相应版本，解压到c盘用户下新建的hugo文件夹中
+hugo下载网址
+3.windows系统需要在“系统变量”中“PATH”里新建配置，添加hugo文件夹（iso系统不用）
+3.在用户目录中打开cmd，“hugo version”，看是否安装成功 4.“hugo new site test1”（test1是自己取的存放网站所有信息的名字） 建立网站文件夹
+5.在这里 下载主题，解压到test/themes中，改文件名（如果主题文件名后有master，去掉它，否则后续该主题可能在hugo显示错误）
+6.进入主题，将content、static文件夹以及config.toml都替换掉test根目录中的
+7.“hugo server”，成功建立静态网站 生成静态网站：网址
+#将网站的静态内容上传到gitHub上
+ hugo &ndash;theme=hugo-tranquilpeak-theme &ndash;baseUrl=&ldquo;http://YOURNAME.github.io/&quot;
+所有静态页面都会生成到 public 目录下；
+ 在GitHub上创建个Repository，命名为：YOURNAME.github.io(YOURNAME替换为自己的用户名)；
+ 将生成的 public 目录下所有文件拷贝或者git push到YOURNAME.github.io项目中；
+ 推送文件git push -u origin master。完成推送，Github上就能看到我们上传的文件了。  $ mkdir ~/github.io/bsdcxx.github.io/
+$ cd ~/20181130/public/
+$ cp -r . ~/github.io/bsdcxx.github.io/
+$ cd github.io/bsdcxx.github.io/
+$ git init
+$ git status
+$ git add .
+$ git commit -m &ldquo;add new article&rdquo;">
+
+
+<meta property="og:description" content="Hugo学习 1.在c盘用户中新建一个名为hugo的文件夹
+2.下载hugo：找到相应版本，解压到c盘用户下新建的hugo文件夹中
+hugo下载网址
+3.windows系统需要在“系统变量”中“PATH”里新建配置，添加hugo文件夹（iso系统不用）
+3.在用户目录中打开cmd，“hugo version”，看是否安装成功 4.“hugo new site test1”（test1是自己取的存放网站所有信息的名字） 建立网站文件夹
+5.在这里 下载主题，解压到test/themes中，改文件名（如果主题文件名后有master，去掉它，否则后续该主题可能在hugo显示错误）
+6.进入主题，将content、static文件夹以及config.toml都替换掉test根目录中的
+7.“hugo server”，成功建立静态网站 生成静态网站：网址
+#将网站的静态内容上传到gitHub上
+ hugo &ndash;theme=hugo-tranquilpeak-theme &ndash;baseUrl=&ldquo;http://YOURNAME.github.io/&quot;
+所有静态页面都会生成到 public 目录下；
+ 在GitHub上创建个Repository，命名为：YOURNAME.github.io(YOURNAME替换为自己的用户名)；
+ 将生成的 public 目录下所有文件拷贝或者git push到YOURNAME.github.io项目中；
+ 推送文件git push -u origin master。完成推送，Github上就能看到我们上传的文件了。  $ mkdir ~/github.io/bsdcxx.github.io/
+$ cd ~/20181130/public/
+$ cp -r . ~/github.io/bsdcxx.github.io/
+$ cd github.io/bsdcxx.github.io/
+$ git init
+$ git status
+$ git add .
+$ git commit -m &ldquo;add new article&rdquo;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HUGO学习">
+<meta name="twitter:title" content="HUGO学习">
+<meta property="og:url" content="https://example.org/2018/10/hugo%E5%AD%A6%E4%B9%A0/">
+<meta property="twitter:url" content="https://example.org/2018/10/hugo%E5%AD%A6%E4%B9%A0/">
+<meta property="og:site_name" content="关于程肖雪的项目">
+<meta property="og:description" content="Hugo学习 1.在c盘用户中新建一个名为hugo的文件夹
+2.下载hugo：找到相应版本，解压到c盘用户下新建的hugo文件夹中
+hugo下载网址
+3.windows系统需要在“系统变量”中“PATH”里新建配置，添加hugo文件夹（iso系统不用）
+3.在用户目录中打开cmd，“hugo version”，看是否安装成功 4.“hugo new site test1”（test1是自己取的存放网站所有信息的名字） 建立网站文件夹
+5.在这里 下载主题，解压到test/themes中，改文件名（如果主题文件名后有master，去掉它，否则后续该主题可能在hugo显示错误）
+6.进入主题，将content、static文件夹以及config.toml都替换掉test根目录中的
+7.“hugo server”，成功建立静态网站 生成静态网站：网址
+#将网站的静态内容上传到gitHub上
+ hugo &ndash;theme=hugo-tranquilpeak-theme &ndash;baseUrl=&ldquo;http://YOURNAME.github.io/&quot;
+所有静态页面都会生成到 public 目录下；
+ 在GitHub上创建个Repository，命名为：YOURNAME.github.io(YOURNAME替换为自己的用户名)；
+ 将生成的 public 目录下所有文件拷贝或者git push到YOURNAME.github.io项目中；
+ 推送文件git push -u origin master。完成推送，Github上就能看到我们上传的文件了。  $ mkdir ~/github.io/bsdcxx.github.io/
+$ cd ~/20181130/public/
+$ cp -r . ~/github.io/bsdcxx.github.io/
+$ cd github.io/bsdcxx.github.io/
+$ git init
+$ git status
+$ git add .
+$ git commit -m &ldquo;add new article&rdquo;">
+<meta name="twitter:description" content="Hugo学习 1.在c盘用户中新建一个名为hugo的文件夹
+2.下载hugo：找到相应版本，解压到c盘用户下新建的hugo文件夹中
+hugo下载网址
+3.windows系统需要在“系统变量”中“PATH”里新建配置，添加hugo文件夹（iso系统不用）
+3.在用户目录中打开cmd，“hugo version”，看是否安装成功 4.“hugo new site test1”（test1是自己取的存放网站所有信息的名字） 建立网站文件夹
+5.在这里 下载主题，解压到test/themes中，改文件名（如果主题文件名后有master，去掉它，否则后续该主题可能在hugo显示错误）
+6.进入主题，将content、static文件夹以及config.toml都替换掉test根目录中的
+7.“hugo server”，成功建立静态网站 生成静态网站：网址
+#将网站的静态内容上传到gitHub上
+ hugo &ndash;theme=hugo-tranquilpeak-theme &ndash;baseUrl=&ldquo;http://YOURNAME.github.io/&quot;
+所有静态页面都会生成到 public 目录下；
+ 在GitHub上创建个Repository，命名为：YOURNAME.github.io(YOURNAME替换为自己的用户名)；
+ 将生成的 public 目录下所有文件拷贝或者git push到YOURNAME.github.io项目中；
+ 推送文件git push -u origin master。完成推送，Github上就能看到我们上传的文件了。  $ mkdir ~/github.io/bsdcxx.github.io/
+$ cd ~/20181130/public/
+$ cp -r . ~/github.io/bsdcxx.github.io/
+$ cd github.io/bsdcxx.github.io/
+$ git init
+$ git status
+$ git add .
+$ git commit -m &ldquo;add new article&rdquo;">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2018-10-06T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2018-10-06T00:00:00">
+  
+  
+  
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=640">
+
+
+    <title>HUGO学习</title>
+
+    <link rel="icon" href="https://example.org/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://example.org/2018/10/hugo%E5%AD%A6%E4%B9%A0/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://example.org/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://example.org/">关于程肖雪的项目</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://example.org/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://example.org/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">程肖雪 project</h4>
+        
+          <h5 class="sidebar-profile-bio">成为更酷的人</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/">
+    
+      
+      
+      <span class="sidebar-button-desc">tutorials</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/bsdcxx/" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/636472/kakawait" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+      
+      <span class="sidebar-button-desc">文章流</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      HUGO学习
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-10-06T00:00:00Z">
+        
+  October 6, 2018
+
+      </time>
+    
+    
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              
+
+<h1 id="hugo学习">Hugo学习</h1>
+
+<p>1.在c盘用户中新建一个名为hugo的文件夹</p>
+
+<p>2.下载hugo：找到相应版本，解压到c盘用户下新建的hugo文件夹中</p>
+
+<p><a href="https://github.com/gohugoio/hugo/releases">hugo下载网址</a></p>
+
+<p>3.windows系统需要在“系统变量”中“PATH”里新建配置，添加hugo文件夹（iso系统不用）<br />
+<img src="C:UsersCxx20181130staticimages1543110326.png" alt="步骤1" /><br />
+<img src="C:UsersCxx20181130staticimages1543110513.png" alt="步骤2" /><br />
+<img src="C:UsersCxx20181130staticimages1543110541.png" alt="步骤3" /></p>
+
+<p>3.在用户目录中打开cmd，“hugo version”，看是否安装成功
+<img src="C:UsersCxx20181130staticimages1543110829.png" alt="安装成功" /></p>
+
+<p>4.“hugo new site test1”（test1是自己取的存放网站所有信息的名字）
+<a href="C:UsersCxx20181130staticimages1543110956.png">建立网站文件夹</a></p>
+
+<p>5.在<a href="https://themes.gohugo.io/">这里</a> 下载主题，解压到test/themes中，改文件名（如果主题文件名后有master，去掉它，否则后续该主题可能在hugo显示错误）</p>
+
+<p>6.进入主题，将content、static文件夹以及config.toml都替换掉test根目录中的</p>
+
+<p>7.“hugo server”，<a href="https://example.org/img/1543111190.png">成功建立静态网站</a>
+生成静态网站：<a href="http://localhost:1313/">网址</a></p>
+
+<p>#将网站的静态内容上传到gitHub上</p>
+
+<ul>
+<li>hugo &ndash;theme=hugo-tranquilpeak-theme &ndash;baseUrl=&ldquo;<a href="http://YOURNAME.github.io/&quot;">http://YOURNAME.github.io/&quot;</a><br />
+所有静态页面都会生成到 public 目录下；<br /></li>
+<li>在GitHub上创建个Repository，命名为：YOURNAME.github.io(YOURNAME替换为自己的用户名)；<br /></li>
+<li>将生成的 public 目录下所有文件拷贝或者git push到YOURNAME.github.io项目中；<br /></li>
+<li>推送文件git push -u origin master。完成推送，Github上就能看到我们上传的文件了。</li>
+</ul>
+
+<p>$ mkdir ~/github.io/bsdcxx.github.io/<br />
+$ cd ~/20181130/public/<br />
+$ cp -r . ~/github.io/bsdcxx.github.io/<br />
+$ cd github.io/bsdcxx.github.io/<br />
+$ git init<br />
+$ git status<br />
+$ git add .<br />
+$ git commit -m &ldquo;add new article&rdquo;<br />
+$ git push <a href="https://github.com/bsdcxx/bsdcxx.github.io.git">https://github.com/bsdcxx/bsdcxx.github.io.git</a> master</p>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://example.org/2018/10/%E5%90%84%E7%A7%8Dfab%E9%A1%B9%E7%9B%AE/" data-tooltip="各种Fab项目">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://example.org/2014/08/video-integrations-showcase/" data-tooltip="Video integrations showcase">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="#ZgotmplZ">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="#ZgotmplZ">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="#ZgotmplZ">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2018 程肖雪 project. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://example.org/2018/10/%E5%90%84%E7%A7%8Dfab%E9%A1%B9%E7%9B%AE/" data-tooltip="各种Fab项目">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://example.org/2014/08/video-integrations-showcase/" data-tooltip="Video integrations showcase">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="#ZgotmplZ">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="#ZgotmplZ">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="#ZgotmplZ">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="%25!%28EXTRA%20string=https%3A%2F%2Fexample.org%2F2018%2F10%2Fhugo%25E5%25AD%25A6%25E4%25B9%25A0%2F%29">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="%25!%28EXTRA%20string=https%3A%2F%2Fexample.org%2F2018%2F10%2Fhugo%25E5%25AD%25A6%25E4%25B9%25A0%2F%29">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="%25!%28EXTRA%20string=https%3A%2F%2Fexample.org%2F2018%2F10%2Fhugo%25E5%25AD%25A6%25E4%25B9%25A0%2F%29">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/d09dc2d7aa5c467519e8af89f7b3d94c?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">程肖雪 project</h4>
+    
+      <div id="about-card-bio">成为更酷的人</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        科学教师 A science teacher
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        中国 北京
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://example.org/2018/11/arduino%E5%AD%A6%E4%B9%A0/">
+                <h3 class="media-heading">Arduino学习</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">#Arduino &emsp;&emsp;Arduino是一个开放源码电子原型平台，拥有灵活、易用的硬件和软件。Arduino可以接收来自各种传感器的输入信号从而检测出运行环境，并通过控制光源，电机以及其他驱动器来影响 其周围环境。板上的微控制器编程使用Arduino编程语言（基于Wiring）和Arduino开发环境（以Processing为基 础）。Arduino可以独立运行，也可以与计算机上运行的软件（例如，Flash，Processing，MaxMSP）进行通 信。Arduino开发 IDE 接口基于开放源代码，可以让您免费下载使用开发出更多令人惊艳的互动作品。
+##Arduino UNO
+&emsp;&emsp;数字扣和模拟扣，即I/O。数字口有0~13，模拟口有0~5。 [](/img/1543130841.png)
+&emsp;&emsp;UNO可以通过两种方式供电方式，一种通过USB供电，另一种是通过外接 6~12V的DC电源。ON是电源指示灯，通电就会亮了。L是接在数字口13上的一个LED，在下面一节会有个样例来说明的。TX、RX是串口通讯指示灯，比如我们在下载程序的过程中，这两个灯就会不停闪烁。
+###安装
+&emsp;&emsp;1.下载Arduino ZIP解压文件夹。
+&emsp;&emsp;2.安装驱动：Arduino UNO和电脑相连，打开ON指示灯。打开控制面板，选择设备管理器。找到其他设备&gt;Arduino-XX，右击选择更新驱动程序软件。
+&emsp;&emsp;3.在弹出的对话框中选择下面一项&ndash;&gt; 手动查找并安装驱动程序软件。
+&emsp;&emsp;4.打开到Arduino IDE安装位置，就是上面那个解压文件的位置，选择搜索路径到drivers，点击下一步。
+&emsp;&emsp;5.选择始终安装此驱动程序软件，直至完成。
+&emsp;&emsp;6.[](/img/1543134497.png)
+###下载一个Blink程序
+&emsp;&emsp;下载一个最简单的代码，既可以帮你熟悉如何下载程序，同时也测试下板子好坏。UNO板上标有L的LED。这段测试代码就是让这个LED灯闪烁。插上USB线，打开Arduino IDE后，找到“Blink”代码。
+&emsp;&emsp;点击“校验”。在以后写代码的过程中，输入完代码，都需要校验一下，然后再下载到Arduino中。
+&emsp;&emsp;在下载程序之前，我们还要先告诉Arduino IDE板子型号以及相应的串口。选择所用的板卡Board → Arduino UNO。 选择当前的串口——COM口。最后，点击“下载”。 以后程序下载就照着这个步骤做就可以了，再理一下思路，分为三步走: 校验 → 选择boards和com → 下载！
+###如何加载库 1.先把库文件从网站上下载下来，整个压缩包解压到 Arduino IDE 的libraries文件夹中。需要注意的是，库文件夹下要直接显示.cpp和.h文件，绝对不可以把这些库文件再套到二级以上目录，这样子就会导致IDE无法识别。
+2.接下来直接用 Arduino IDE 运行Example里面的程序就可以了，注意不同代码对应的引脚不同。在代码中改为你连接的引脚就行了。 ###代码案例 ####1.LED闪烁 这里我们需要外接一个LED到数字引脚，而不是使用焊在开发板上的LED 13（也就是“L”灯）。
+LED长脚为+，短脚为-（绿色为数字口，蓝色为模拟口，红色为电源VCC，黑色为GND，白色可随意搭配）
+代码分析：
+ ledPin这个变量表示LED和Arduino的数字引脚10相连； setup()函数，它的目的主要的loop函数运行之前为程序做必要的设置。用于初始化变量、设置针脚的输出/输入类型、配置串口等等。每次 Arduino 上电或重启后，setup 函数只运行一次； pinMode(pin, mode)函数，pin是引脚号，mode代表模式（INPUT/OUTPUT）；pinMode()中的INPUT与OUTPUT设置是有讲究的，是由器件本身的功能决定的。LED、蜂鸣器用pinMode(pin, OUTPUT)和digitalWrite(pin,HIGH/LOW）；按键控制用pinMode(pin, INPUT)和digitalRead(pin） digitalWrite(pin,value）value值为HIGH（5V/3.3V）和LOW（0V），分别为点亮和熄灭。 delay(1000)即延迟，等待时间。1000为1秒  ####2.S.O.S求救信号器 莫尔斯码是一种字符编码，英文的每个字母，都是由横杠和点不同的组合而成。这样的好处是，使用简单的两种状态，就能来传递所有的字母和数字。字母“S”用三个点表示，我们这里用短闪烁替代，字母“O”则用三个横杠表示，用长闪烁替代。</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://example.org/2018/11/atom%E5%92%8Cmarkdown%E5%AD%A6%E4%B9%A0/">
+                <h3 class="media-heading">Atom和Markdown学习</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">#Atom和markdown编辑器 ###ATOM下载
+atom软件，打开根目录下的config.toml，对网站首页进行编辑。
+###Markdown下载
+下载markdown Pad软件
+P.S.win10系统还需下载Awesomium 1.6.6 SDK，否则右侧不出现实时网页.
+###Markdown软件学习
+&emsp;Markdown是一套标记语法，这些标记字符就是用来赋予文字不同格式；其次，能将标记字符转换，最终呈现出我们想要的排版效果。 富文本编辑器「编辑文字」是通过点击图形化的功能按钮来实现，Markdown 编辑器则是通过标记字符去编辑。
+优点：1.易读（区块引用、多段落列表）易写易改，用纯文本和和符号组成；
+2.语法种类少，只对应html中一小部分； 3.可以在markdown 段落里随意使用html标签，而html的区块标签里无法使用markdown语法（区段标签是有效的）；
+4.自动将html的特殊字符转化为实体（如果特殊字符是实体的一部分，就保留原状）
+###Markdown基本语法 标题：#
+斜体加粗：*我是斜体*（前后各加一个星号）、我是粗体 （前后各加两个星号）、我是斜体加粗 （前后各家三个星号）
+有序列表：数字+.+空格
+无序列表：*+空格
+链接和图片：
+一个方括号，里面放上图片的替代文字 接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上 选择性的 &lsquo;title&rsquo; 文字。
+其他链接： 直接把链接用方括号包起来（网站or邮箱）
+引用： &gt;开头
+高亮代码：以三个顿号开头和结尾
+表格：
+或者
+| Header 1 | Header 2 | Header 3 | |:&mdash;&mdash;&mdash;-:|&mdash;&mdash;&mdash;&mdash;|&mdash;&mdash;&mdash;&mdash;| | Division 1 | Division 2 | Division 3 | | Division 1 | Division 2 | Division 3 | | Division 1 | Division 2 | Division 3 | | Division 1 | Division 2 | Division 3 |</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://example.org/2018/11/3d-design%E8%BD%AF%E4%BB%B6/">
+                <h3 class="media-heading">3D design软件</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">#3D设计软件
+##Rhino犀牛：建模软件
+下载（试用版）
+视频学习
+插件：
+1.tsplines：细分表面建模技术，大大减少模型表明的控制点数目，局部细分和合并面片等操作，提升建模操作速度和渲染速度
+2.grasshopper：建筑参数化设计插件，把建筑参数的全要素变成变量，通过改变函数或算法，获得不同建筑设计方案
+优势：
+1.平民化：易学，对操作系统无要求，空间站用小；
+2.人性化：建模工具多，将草图快速转化;
+3.专业化：渲染插件丰富，nurbs非均匀有理B样条建模方式，逼真生动；输出格式多。
+下方命令：
+&emsp;&emsp;锁定格点：只能交点作为起始点
+&emsp;&emsp;正交：只能上下左右
+&emsp;&emsp;物件锁点：出现各种点的名称，自动捕捉所选择的点
+&emsp;&emsp;记录构建历史：镜像等操作后，镜像线可随原线的移动而移动
+左边工具栏：
+&emsp;&emsp;曲线（直角、圆角、衔接、延伸、偏移等）
+&emsp;&emsp;曲面（放样、挤出、嵌面、单轨扫掠、双轨扫掠等）、曲面圆角（混接曲面、偏移曲面、重建边缘等）
+犀牛插件grasshopper
+下载grasshopper插件
+直接运行exe，然后打开犀牛，在输入框输入插件名称grasshopper，然后再次安装即可</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://example.org/2018/10/git%E5%92%8Cgithub%E5%AD%A6%E4%B9%A0/">
+                <h3 class="media-heading">git和gitHub学习</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">git和gitHub git是什么？ &emsp;&emsp;Git是目前世界上最先进的分布式版本控制系统。可以随时看到文件的改动并进行恢复，减少了修改文件后产生的多个文档。
+gitHub是什么？ &emsp;&emsp;是一个面向开源及私有软件项目的托管平台，因为只支持git 作为唯一的版本库格式进行托管，故名gitHub。作为一个分布式的版本控制系统，在Git中并不存在主库这样的概念，每一份复制出的库都可以独立使用，任何两个库之间的不一致之处都可以进行合并。而GitHub可以托管各种git库，并提供一个web界面。在GitHub，用户可以十分轻易地找到海量的开源代码。
+工作区和暂存区是什么？ &emsp;&emsp;工作区（Working Directory）就是你在电脑里能看到的目录，git init产生的文件夹就是一个工作区。工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库（Repository）。Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。如下图：
+!(/layout/1543221816.png)
+&emsp;&emsp;前面讲了我们把文件往Git版本库里添加的时候，是分两步执行的： 第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区； 第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。 因为我们创建Git版本库时，Git自动为我们创建了唯一一个master分支，所以，现在，git commit就是往master分支上提交更改。 你可以简单理解为，需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。（如果是多次修改，每次修改完都要git add，然后git commit，否则只有第一次修改，因为后面几次的修改都没有加入暂存区）
+git怎么用？ git的一些命令：
+git add readme.txt&mdash;&ndash;把文件添加到仓库（之前应在git init创建的本地仓库中建立好readme.txt文档）
+git commit -m &ldquo;wrote a readme file&rdquo;&mdash;&mdash;把文件提交到仓库，引号里输入的是本次提交的说明，最好写清楚
+git status&mdash;-时刻掌握仓库当前的状态
+git diff readme.txt&mdash;&ndash;能看看具体修改了什么内容
+git log（reflog）或git log &ndash;pretty=oneline&mdash;&ndash;显示从最近到最远的提交日志
+git reset &ndash;hard HEAD^（或者id号）&mdash;&mdash;把当前版本回退到上一个版本，head表示当前版本</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://example.org/2018/10/%E7%94%A8hugo%E5%92%8Cgithub%E5%88%B6%E4%BD%9C%E7%BD%91%E7%AB%99/">
+                <h3 class="media-heading">用hugo和github制作网站</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">安装git 1.安装git .如果你不确定自己的电脑是否安装了Git或者安装之后不知道安装是否完成，都可以使用git的版本查询完成确认：git &ndash;version
+1.png
+2.安装了Git，为了保证Git和Github能无密码链接，也就是为后续工作减轻输入密码的工作量，可以使用SSH的方式建立连接，如果你觉得每次输入用户名密码不碍事，也可以忽略这个操作。 输入：ssh-keygen -t rsa -C &ldquo;email address&rdquo;
+2.png
+使用这个命令 ssh-keygen 一般会要求确认位置和输入密码，这写操作都使用回车就能解决。
+用下列语句提取ssh代码：cat ~/.ssh/id_rsa.pub
+3.png
+复制提取的全部信息，粘贴到 Github SSH Keys管理页面 上。起一个好记忆的名字一保存就完成了SSH链接的工作。
+4.png
+3.建立仓库 git init
+5.png
+在Github上，选择“New Repository”链接，起一个名字，点击”Create repository“按钮就完成了相关的建仓库操作。
+4.在init后的文件下，运行命令：git add . 就可以把所有文件都添加到我们新建的本地仓库中了。这个操作很简单，也就完成了添加文件的操作。
+5.提交内容git commit -m &ldquo;text&rdquo;
+6.git remote add origin https://github.com/[user]/[初始文件名].git
+7.推送文件git push -u origin master。完成推送，Github上就能看到我们上传的文件了。在第一次完成上述步骤之后，以后的网站更新就只需要完成第4、5、7步所涉及的步骤。</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://example.org/2018/10/%E5%88%9D%E8%AF%86fablab/">
+                <h3 class="media-heading">初识Fablab</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">#Fablab是什么？
+##简介 &emsp;&emsp;Fab Lab即微观装配实验室（Fabrication Laboratory），是美国MIT比特与原子研究中心发起的一项新颖的实验——一个拥有几乎可以制造任何产品和工具的小型的工厂。该中心主任Gershenfeld教授认为，迄今为止，数字革命的发展已经经历了两个重要的阶段，分别是个人通讯和个人计算。以移动技术为代表的普适计算的发展通过上述两个阶段的发展，无所不在的个人通讯网络及个人计算已经形成。目前，人类正处于第三次数字革命的前夕，在这次以“个人制造”为核心的革命中，相关的材料技术和信息技术已经露出苗头。从某种意义上说，Fab Lab正是这即将到来的革命大潮前跃起的浪花。
+&emsp;&emsp;Fab Lab的最初灵感来源于Gershenfeld教授于1998年在MIT开设的一门课程“如何能够创造任何东西”，这很快成为他最受欢迎的一门课。没有技术经验的学生们在课堂上创造出很多令人印象深刻的产品，如为鹦鹉制作的网络浏览器，收集尖叫的盒子，保护女性人身安全的配有传感器和防御性毛刺的裙子等等。可以制造任何想要的东西，学生们为此而兴奋，而这种可以实现随心所欲的个性化需求的目标, 也逐渐成为Fab Lab萌芽的创新研究理念。
+&emsp;&emsp;学生们的创新活动的热情使Gershenfeld教授受到了鼓舞。Gershenfeld教授认为与其让人们接受科学知识，不如给他们装备、相关的知识以及工具让他们自己来发现科学[7]。随后，第一个Fab Lab于2001年在波士顿建立。第一间Fab Lab由美国国家科学基金会（National Science Foundation）拨款建造，旨在提供完成低成本制造实验的所需环境。在Fab Lab中，创造自己想象中的事务的渴望激发着用户。这种用户也被称之为“领导者用户（Lead user）”, Eric von Hippel教授曾指出，“领导者用户”领先于用户总体的主流，而且他们为了自己所遇到的需求，期望从一个解决方案中获取相对较高的收益。“领导者用户”在Fab Lab中扮演重要的角色。
+&emsp;&emsp;Gershenfeld并不仅仅想在美国实践Fab Lab的理念。实际上，Fab Lab与不同文化背景、不同技术成熟度下特定需求碰撞出的火花可能更具价值。目前，全球已经建立了30家遵循类似理念和原则的实验室。第一家国际Fab Lab建立在哥斯达黎加。截止2008年，挪威、印度、加纳、南非、肯尼亚、冰岛、西班牙和荷兰等国家都相继建立了Fab Lab，并且加入了Fab Lab的全球网络。随着Fab Lab网络的延伸，个人创意、个人设计、个人制造越来越升入人心，进一步引发了全球创客的浪潮。 ##构建模式与运行环境
+###2.1 Fab Lab的构建模式
+&emsp;&emsp;Fab Lab是一个快速建立原型的平台，用户通过Fab Lab提供的硬件设施以及材料，开放源代码软件和由MIT的研究人员开发的程序等电子工具来实现他们想象中产品的设计和制造。目前组建一个Fab Lab大约需要 2.5 ~ 5 万美元的硬件设施和 0.5 ~ 1 万美元的维护/材料支出费用。而每个Fab Lab的开发过程、创新成果也并非是独立的，而是在整个Fab Lab网络中通过各种手段（如视频会议）进行共享。 ###2.2 Fab Lab的技术运行环境
+&emsp;&emsp;Fab Lab所提供的技术环境涵盖开发的全流程：从设计、制造，到测试、调试、监控和分析，再到文档整理。尽管有一个基本的工具集作为基础，但根据特定需求充分利用特定环境下的资源和工具同样重要。因此，Fab Lab也为用户提供了制造自己所需工具的能力，用户可以在Fab Lab的技术环境里自行创造实验过程中所需的特定用途工具。 &emsp;&emsp;目前核心的开发设备包括以下几部分：计算机控制的激光切割器——将二维部件压接装配成为三维结构；标记切割器——生产印刷口罩，灵活电路及天线；精密（微米分辨率）铣床——生产三维模具和表面贴装电路板；更大的（4’*8’）的数控铣床——制造适合家居（和房屋）大小的部件；聚乙烯切割机；可编程控制工具——低成本高速嵌入式处理器（例如Atmel AVR Mega系列和 Tiny系列单片机）
+#####2.2.1 Fab Lab环境里的设计 &emsp;&emsp;每一个Fab Lab会配置一台或多台个人计算机，这些计算机用来整合实验室中的其它工具。CAD/CAM软件、二维或三维的机械设计，电子电路的建模、仿真和数据分析，印刷电路版（Printed Circuit Board，PCB）的布线设计，针对其它工具的接口设计和编程，以及出于交流和信息检索目的的网络发布和文档整理，这些工作都离不开计算机。 &emsp;&emsp;此外，为了向Fab Lab用户群提供封装好的工具，MIT媒体实验室的草根创新小组（GIG）提供了“罗汉塔”系统——旨在实现辅助设计和加快商业电子系统原型构建的可扩展、模块化的计算结构单元。 “罗汉塔”由若干不同的基本功能模块构成，包括中央处理器和一系列加在它上面的功能电路版，涵盖传感、触发、数据存储、通信、多媒体展现等功能。 &emsp;&emsp;用户不仅可以利用“罗汉塔”设计并开展自己的实验活动，而且也能构建自己的工具，例如低成本的示波器、简版的个人计算机以及机床的控制系统。拥有了构建工具的能力，使得用户不仅可以通过增加新的功能模块扩展系统，而且将能够真正的重建系统，甚至设计更加复杂的全新硬件系统。因此，“罗汉塔”系统本身就是一个集中体现Fab Lab研究和实践活动精神的例子：即“利用Fab Lab设备制造出的新的Fab Lab设备”（Things that make things）。</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://example.org/2018/10/%E5%90%84%E7%A7%8Dfab%E9%A1%B9%E7%9B%AE/">
+                <h3 class="media-heading">各种Fab项目</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Fablab for high school students:(in Cambridge) 初高中生一块上Fab Academy 全球各地教育届的人士都在上fablab
+https://cambridge.nuvustudio.com/
+ 参数化设计案例: http://Fab.cba.mit.edu/ &gt;&gt; classes &gt;&gt; 2017 Tomas Vega （Parameter 和 柔性电路 Flexible circuit的结合）
+http://fab.cba.mit.edu/classes/863.17/CBA/people/tomasero/index.html
+ A brain wave translate to &gt;&gt; sound projects （用脑电波搞声音的项目,脑电波可视化）
+Montserrat Ciges （西班牙人，移居哥斯达黎加工作的Fab Lab Veritas协调员）
+http://archive.fabacademy.org/2017/fablabveritas/students/158/index.html
+ 如何读取生物信号：关键词EEG ECG
+http://fab.cba.mit.edu/classes/862.13/students/charles.fracchia/index.html
+ Dario Bernabini 哥们想做一个节省洗澡水的设备（用游戏比谁洗澡用水少，记录用水数据）
+http://fab.academany.org/2018/labs/fablabsiena/students/dario-bernabini/final-project.html
+omega flow meter （Neil 推荐的设备）不用放到水管里头就可以统计水量。
+ group project need to do completely separate GP必须是分工清楚的。 robot follow the people that carry things for him OpenSCAD 用程序来建模型。</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://example.org/2018/10/hugo%E5%AD%A6%E4%B9%A0/">
+                <h3 class="media-heading">HUGO学习</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Hugo学习 1.在c盘用户中新建一个名为hugo的文件夹
+2.下载hugo：找到相应版本，解压到c盘用户下新建的hugo文件夹中
+hugo下载网址
+3.windows系统需要在“系统变量”中“PATH”里新建配置，添加hugo文件夹（iso系统不用）
+3.在用户目录中打开cmd，“hugo version”，看是否安装成功 4.“hugo new site test1”（test1是自己取的存放网站所有信息的名字） 建立网站文件夹
+5.在这里 下载主题，解压到test/themes中，改文件名（如果主题文件名后有master，去掉它，否则后续该主题可能在hugo显示错误）
+6.进入主题，将content、static文件夹以及config.toml都替换掉test根目录中的
+7.“hugo server”，成功建立静态网站 生成静态网站：网址
+#将网站的静态内容上传到gitHub上
+ hugo &ndash;theme=hugo-tranquilpeak-theme &ndash;baseUrl=&ldquo;http://YOURNAME.github.io/&quot;
+所有静态页面都会生成到 public 目录下；
+ 在GitHub上创建个Repository，命名为：YOURNAME.github.io(YOURNAME替换为自己的用户名)；
+ 将生成的 public 目录下所有文件拷贝或者git push到YOURNAME.github.io项目中；
+ 推送文件git push -u origin master。完成推送，Github上就能看到我们上传的文件了。  $ mkdir ~/github.io/bsdcxx.github.io/
+$ cd ~/20181130/public/
+$ cp -r . ~/github.io/bsdcxx.github.io/
+$ cd github.io/bsdcxx.github.io/
+$ git init
+$ git status
+$ git add .
+$ git commit -m &ldquo;add new article&rdquo;</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://example.org/2014/08/video-integrations-showcase/">
+                <h3 class="media-heading">Video integrations showcase</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Aug 8, 2014
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Youtube and Vimeo videos are easily integrated thanks to tags plugins. Of course, you can add video other platforms like dailymotion.
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://example.org/2013/02/image-gallery-showcase/">
+                <h3 class="media-heading">Image gallery showcase</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2013
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>And here is the image gallery!
+</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         10 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://example.org/images/cover.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://example.org/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/example.org\/2018\/10\/hugo%E5%AD%A6%E4%B9%A0\/';
+          
+            this.page.identifier = '\/2018\/10\/hugo%E5%AD%A6%E4%B9%A0\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+
